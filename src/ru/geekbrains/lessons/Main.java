@@ -56,13 +56,25 @@ public class Main {
 //        sb.reverse();
 //        System.out.println(sb);
 
+        Cat[] cat = new Cat[3];
+        cat[0] = new Cat("Barsik", 20, 20);
+        cat[1] = new Cat("Murzik", 50, 100);
+        cat[2] = new Cat("Barsik", 100, 200);
+        Plate plate = new Plate(500);
 
-
-
+        for (Cat i : cat) {
+            if ((i.getHungry() - i.getAppetite()) >= 0) {
+                i.eat(plate);
+                System.out.println("Кот " + i.getName() + " съел " + i.getAppetite() + " корма.");
+                System.out.println(i.isHungry());
+            }
         }
 
 
     }
+
+
+}
 
 
 //        Cat cat = new Cat("Barsik", 20, 40);
