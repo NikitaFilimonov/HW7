@@ -11,6 +11,20 @@ public class Plate {
         return food;
     }
 
+    boolean isPlateEmpty(int n) {
+        return (food - n) >= 0;
+    }
+
+    public void decreaseFood(int amount) {
+        this.food -= amount;
+
+    }
+
+    public void increaseFood(int n) {
+        this.food += n;
+        System.out.println("Было добавлено " + n + " еды");
+
+    }
 
 
 
